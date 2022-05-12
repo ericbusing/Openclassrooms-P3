@@ -1,19 +1,7 @@
-*
-    box-sizing: border-box;
-    font-family: 'Roboto';
-
-header
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    img 
-        width: 150px;
-
-@mixin color_form 
-    background-color: $grey;
-
-$grey: #d8d8d8;
-$color_primary: #9356DC;
+@import url(Base\base.sass);
+@import url(Utils\variables.sass);
+@import url(Utils\mixins.sass);
+@import url(Layout\mise_en_page.sass);
 
 form
     display: flex;
@@ -27,13 +15,9 @@ form
         border: none;
         @include color_form;
 
-@mixin border_btn
-    border-radius: 20px;
-    border: none;
-
 .explore
-    background-color: rgb(224, 224, 224);
-    box-shadow: 0px -3px grey;
+    background-color: #f6f6f6;
+    box-shadow: 0px -3px #cdcdcd;
     h3 , p
         text-align: center;
         margin-left: 70px;
@@ -105,7 +89,7 @@ aside
         margin: auto;
     img
         border-radius: 20px 20px 0 0;
-        width: 320px; 
+        width: 100%; 
         height: 150px;
         object-fit: cover;
         object-position: 25% 60%;
@@ -120,12 +104,3 @@ aside
     i
         font-size: 22px;
         margin-top: -50px;
-
-footer
-    background-color: black;
-    img
-        width: 150px;
-        filter: opacity(50%);
-        padding-top: 20px;
-    ul
-        color: white;
