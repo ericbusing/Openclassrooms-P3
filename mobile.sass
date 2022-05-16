@@ -1,11 +1,14 @@
-@import url(Base\base.sass);
-@import url(Utils\variables.sass);
-@import url(Utils\mixins.sass);
-@import url(Layout\mise_en_page.sass);
+@import "./base/base.sass";
+@import "./utils/variables.sass";
+@import "./utils/mixins.sass";
+@import "./layout/mise_en_page.sass";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 form
     display: flex;
     justify-content: center;
+    width: 100%;
     @include color_form;
     i
         margin-left: 50px;
@@ -16,7 +19,10 @@ form
         @include color_form;
 
 .explore
-    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color_btn;
     box-shadow: 0px -3px #cdcdcd;
     h3 , p
         text-align: center;
@@ -25,38 +31,44 @@ form
     p
         margin-left: 30px;
         margin-right: 30px;
-    .explore_btn
+    .action_btn
         @include border_btn;
         padding: 10px 15px;
-        margin-left: 100px;
         margin-bottom: 20px;
+        background: $gradient_color;
+        @include shadow_btn;
+        color: white;
         cursor: pointer;
+        &:hover
+            @include darken_shadow_btn;
 article
-    margin: auto;
-    width: 90%;
-    h2
-        margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 .functioning
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
+    width: 80%;
     margin-bottom: 30px;
-    width: 90%;
+    h2
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
     .functioning_btn
         display: flex;
         width: 100%;
     button
         padding: 20px 50px 20px 30px;
         @include border_btn;
+        @include shadow_btn;
         margin-bottom: 15px;
         cursor: pointer;
+        width: 100%;
         margin-left: -10px;
-    .btn_2
-        padding: 20px 55px 20px 30px;
-        @include border_btn;
-        margin-bottom: 15px;
-        cursor: pointer;
+        &:hover
+            @include darken_shadow_btn;
+            @include lighten_color_btn;
     i
         font-size: 14px;
         padding-right: 20px;
@@ -79,12 +91,28 @@ aside
     h2
         padding-top: 20px;
         margin-left: -52%;
+        .new
+        position: relative;
+    .new::before
+        content: "Nouveau";
+        position: absolute;
+        background-color: $color_tertiary;
+        color: darken($color_tertiary, 50%);
+        margin-left: 225px;
+        margin-top: 10px;
+        padding: 5px 10px;
+        border-radius: 3px;
+
 .restaurant_card
     width: 89%;
     height: 240px;
     border-radius: 20px;
     margin-bottom: 20px;
     background-color: white;
+    @include shadow_card;
+    a
+        text-decoration: none;
+        color: inherit;
     figure
         margin: auto;
     img
@@ -104,3 +132,6 @@ aside
     i
         font-size: 22px;
         margin-top: -50px;
+        transform: scale(1);
+
+

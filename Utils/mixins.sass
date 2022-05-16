@@ -4,3 +4,15 @@
 @mixin border_btn
     border-radius: 20px;
     border: none;
+
+@mixin shadow_btn
+    box-shadow: 1px 1px 10px 8px $color_shadow_btn;
+
+@mixin darken_shadow_btn
+    box-shadow: 1px 1px 10px 8px darken($color_shadow_btn, 5%);
+
+@mixin lighten_color_btn
+    background: lighten($grey, 3%);
+
+@mixin shadow_card
+    box-shadow: 0px 3px 8px $color_shadow_btn;

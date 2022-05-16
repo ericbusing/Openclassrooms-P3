@@ -6,17 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mobile.css">
     <script src="https://kit.fontawesome.com/69b06dbea6.js" crossorigin="anonymous"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-    </style> 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-    </style> 
     <title>Ohmyfood!</title>
 </head>
 
 <header>
-    <img src="./images/logo/ohmyfood.png" alt="logo Ohmyfood!">
+    <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood!">
 </header>
 
 <body>
@@ -33,7 +27,7 @@
 
             <h3>Réservez le menu qui vous convient</h3>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="explore_btn">Explorer nos restaurants</button>
+            <button class="action_btn">Explorer nos restaurants</button>
 
         </div>
 
@@ -41,9 +35,9 @@
 
             <article>
 
-                    <h2>Fonctionnement</h2>
-
                     <div class="functioning">
+
+                        <h2>Fonctionnement</h2>
                         
                         <div class="functioning_btn">
                             <i class="fa-solid fa-circle-1 number">1</i>
@@ -66,19 +60,22 @@
 
                 <div class="restaurants">
                     <h2>Restaurants</h2>
-
-                    <div class="restaurant_card">
-                        <figure>
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="1er restaurant"/>
-                            <figcaption>
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
-                                <div class="heart"><i class="fa-regular fa-heart"></i></div>
-                            </figcaption>
-                        </figure>
+                    
+                    <div class="restaurant_card new">
+                        <a href="La palette du goût.html">
+                            <figure>
+                                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="1er restaurant"/>
+                                <figcaption>
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                    <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                                </figcaption>
+                            </figure>   
+                        </a>
                     </div>
+                 
 
-                    <div class="restaurant_card">
+                    <div class="restaurant_card new">
                         <figure>
                             <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="2ème restaurant"/>
                             <figcaption>
@@ -123,11 +120,12 @@
 
         <img src="./images/logo/ohmyfood.png" alt="logo Ohmyfood!">
         <ul>
-            <li>Proposer un restaurant</li>
-            <li>Devenir partenaire</li>
+            <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
+            <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
             <li>Mentions légales</li>
-            <li>Contact</li>
+            <li><a href="ohmyfood-contact@gmail.com" target="_blank">Contact</a></li>
         </ul>
+
     </footer>  
 
 </body>
