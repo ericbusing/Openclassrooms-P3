@@ -1,6 +1,52 @@
-@import "./base/base.sass";
 @import "./utils/variables.sass";
 @import "./utils/mixins.sass";
+@import "./layout/mise_en_page";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import "./layout/mise_en_page";
+.menu_list
+    h4
+        font-weight: 400;
+        border-bottom: 3px solid $color_tertiary;
+        width: 11%;
+        padding-bottom: 3px;
+.heart
+    @include heart;
+    top: 2.5%;
+.restaurant_btn
+    @include restaurant_btn;
+    h3
+        font-size: 18px;
+    p
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-top: 0;
+        margin-bottom: 10px;
+        height: 15px;
+        padding-top: 2px;
+    .price
+        position: relative;
+        float: right;
+        margin-top: -15px;
+        font-size: 14px;
+        font-weight: bold;
+        padding-right: 15px;
+        margin-top: -22px;
+.order
+    display: flex;
+    justify-content: center;
+.action_btn
+    background: $gradient_color;
+    color: white;
+    width: 50%;
+    height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    @include border_btn;
+    @include shadow_btn;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 1000ms;
+    &:hover
+        @include darken_shadow_btn;
+        transform: scale(1.15);

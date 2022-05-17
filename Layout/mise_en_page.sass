@@ -1,9 +1,53 @@
+*
+    box-sizing: border-box;
+    font-family: 'Roboto';
+body
+    margin: 0;
 header
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    box-shadow: 0 8px 5px -5px #797979;
+    padding-bottom: 20px;
+    margin-bottom: 3px;
     img 
         width: 150px;
+nav
+    display: flex;
+    width: 90%;
+    a
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+    div
+        display: flex;
+        justify-content: center;
+        width: 100%;
+.restaurant_pic
+    width: 100%;
+.restaurant_title
+    display: flex;
+    p
+        font-size: 24px;
+        font-family: 'Shrikhand';
+        margin-bottom: 0;
+.restaurant_menu 
+    position: relative;
+    z-index: 1;
+    margin-top: -55px;
+    background: #eaeaea;
+    border-radius: 40px 40px 0 0;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+.menu_list
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    p
+        width: 90%;
+        padding-right: 20px;
 footer
     background-color: #353535;
     img
@@ -17,6 +61,7 @@ footer
         padding-left: 30px;
         padding-bottom: 30px;
         line-height: 1.5;
+        margin-bottom: 0;
         li
             i
                 font-size: 12px;

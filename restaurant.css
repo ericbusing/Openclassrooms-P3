@@ -18,10 +18,89 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 20px 0;
+  -webkit-box-shadow: 0 8px 5px -5px #797979;
+          box-shadow: 0 8px 5px -5px #797979;
+  padding-bottom: 20px;
+  margin-bottom: 3px;
 }
 
 header img {
   width: 150px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+}
+
+nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.restaurant_pic {
+  width: 100%;
+}
+
+.restaurant_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.restaurant_title p {
+  font-size: 24px;
+  font-family: 'Shrikhand';
+  margin-bottom: 0;
+}
+
+.restaurant_menu {
+  position: relative;
+  z-index: 1;
+  margin-top: -55px;
+  background: #eaeaea;
+  border-radius: 40px 40px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 50px;
+}
+
+.menu_list {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu_list p {
+  width: 90%;
+  padding-right: 20px;
 }
 
 footer {
@@ -42,6 +121,7 @@ footer ul {
   padding-left: 30px;
   padding-bottom: 30px;
   line-height: 1.5;
+  margin-bottom: 0;
 }
 
 footer ul li i {
@@ -52,5 +132,116 @@ footer ul li i {
 footer ul li a {
   text-decoration: none;
   color: inherit;
+}
+
+.menu_list h4 {
+  font-weight: 400;
+  border-bottom: 3px solid #99e2d0;
+  width: 11%;
+  padding-bottom: 3px;
+}
+
+.heart {
+  position: absolute;
+  right: 32px;
+  top: 20%;
+  top: 2.5%;
+}
+
+.heart .fa-solid, .heart .fa-regular {
+  font-size: 26px;
+}
+
+.heart .fa-solid:hover, .heart .fa-regular:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+}
+
+.heart .fa-solid {
+  position: relative;
+  color: transparent;
+}
+
+.heart .fa-regular {
+  margin-right: -30px;
+  position: absolute;
+}
+
+.restaurant_btn {
+  text-align: left;
+  width: 100%;
+  border-radius: 15px;
+  line-height: 0.5;
+  border: none;
+  background: white;
+  padding: 0 10px 5px 10px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 1px 1px 10px 8px #d7d7d7;
+          box-shadow: 1px 1px 10px 8px #d7d7d7;
+  cursor: pointer;
+}
+
+.restaurant_btn h3 {
+  font-size: 18px;
+}
+
+.restaurant_btn p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 0;
+  margin-bottom: 10px;
+  height: 15px;
+  padding-top: 2px;
+}
+
+.restaurant_btn .price {
+  position: relative;
+  float: right;
+  margin-top: -15px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-right: 15px;
+  margin-top: -22px;
+}
+
+.order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.action_btn {
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  color: white;
+  width: 50%;
+  height: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  -webkit-box-shadow: 1px 1px 10px 8px #d7d7d7;
+          box-shadow: 1px 1px 10px 8px #d7d7d7;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+}
+
+.action_btn:hover {
+  -webkit-box-shadow: 1px 1px 10px 8px #cacaca;
+          box-shadow: 1px 1px 10px 8px #cacaca;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 /*# sourceMappingURL=restaurant.css.map */
