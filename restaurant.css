@@ -134,6 +134,33 @@ footer ul li a {
   color: inherit;
 }
 
+@-webkit-keyframes done_spin {
+  from {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes done_spin {
+  from {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+header {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .menu_list h4 {
   font-weight: 400;
   border-bottom: 3px solid #99e2d0;
@@ -170,17 +197,33 @@ footer ul li a {
 }
 
 .restaurant_btn {
-  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   border-radius: 15px;
   line-height: 0.5;
   border: none;
   background: white;
-  padding: 0 10px 5px 10px;
+  padding: 0;
   margin-bottom: 20px;
   -webkit-box-shadow: 1px 1px 10px 8px #d7d7d7;
           box-shadow: 1px 1px 10px 8px #d7d7d7;
+  overflow: hidden;
   cursor: pointer;
+}
+
+.restaurant_btn .description_btn {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  text-align: left;
 }
 
 .restaurant_btn h3 {
@@ -198,13 +241,43 @@ footer ul li a {
 }
 
 .restaurant_btn .price {
-  position: relative;
-  float: right;
-  margin-top: -15px;
   font-size: 14px;
   font-weight: bold;
-  padding-right: 15px;
-  margin-top: -22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 25px;
+  padding-right: 25px;
+}
+
+.restaurant_btn .done_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #99e2d0;
+  margin-right: -90px;
+  width: 30%;
+  border-radius: 0 15px 15px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.restaurant_btn:hover .done_box {
+  margin-right: 0;
+}
+
+.restaurant_btn .done {
+  background: white;
+  background-clip: text;
+  color: transparent;
+  font-size: 34px;
+  padding-left: 15px;
 }
 
 .order {

@@ -1,0 +1,21 @@
+@-webkit-keyframes done_spin {
+  from {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes done_spin {
+  from {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+/*# sourceMappingURL=animations.css.map */
