@@ -1,21 +1,48 @@
 @-webkit-keyframes done_spin {
-  from {
-    -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
+  0% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
-  to {
+  100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
 }
+
 @keyframes done_spin {
-  from {
-    -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
+  0% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
-  to {
+  100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=animations.css.map */

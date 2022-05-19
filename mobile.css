@@ -64,6 +64,10 @@ nav div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 90%;
 }
 
 .restaurant_title p {
@@ -78,13 +82,17 @@ nav div {
   margin-top: -55px;
   background: #eaeaea;
   border-radius: 40px 40px 0 0;
+  padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu_list {
@@ -96,6 +104,13 @@ nav div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.menu_list h4 {
+  font-weight: 400;
+  border-bottom: 3px solid #99e2d0;
+  width: 11%;
+  padding-bottom: 3px;
 }
 
 .menu_list p {

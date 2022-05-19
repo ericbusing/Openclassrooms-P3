@@ -106,6 +106,13 @@ nav div {
           flex-direction: column;
 }
 
+.menu_list h4 {
+  font-weight: 400;
+  border-bottom: 3px solid #99e2d0;
+  width: 11%;
+  padding-bottom: 3px;
+}
+
 .menu_list p {
   width: 90%;
   padding-right: 20px;
@@ -143,37 +150,56 @@ footer ul li a {
 }
 
 @-webkit-keyframes done_spin {
-  from {
+  0% {
     -webkit-transform: rotate(270deg);
             transform: rotate(270deg);
   }
-  to {
+  100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
 }
 
 @keyframes done_spin {
-  from {
+  0% {
     -webkit-transform: rotate(270deg);
             transform: rotate(270deg);
   }
-  to {
+  100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 
 header {
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-
-.menu_list h4 {
-  font-weight: 400;
-  border-bottom: 3px solid #99e2d0;
-  width: 11%;
-  padding-bottom: 3px;
 }
 
 .heart {
@@ -219,6 +245,53 @@ header {
           box-shadow: 1px 1px 10px 8px #d7d7d7;
   overflow: hidden;
   cursor: pointer;
+  -webkit-animation: appear 1s;
+          animation: appear 1s;
+}
+
+.restaurant_btn--1 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.restaurant_btn--2 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.restaurant_btn--3 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.restaurant_btn--4 {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+
+.restaurant_btn--5 {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+
+.restaurant_btn--6 {
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+}
+
+.restaurant_btn--7 {
+  -webkit-animation-delay: 2100ms;
+          animation-delay: 2100ms;
+}
+
+.restaurant_btn--8 {
+  -webkit-animation-delay: 2400ms;
+          animation-delay: 2400ms;
+}
+
+.restaurant_btn--9 {
+  -webkit-animation-delay: 2700ms;
+          animation-delay: 2700ms;
 }
 
 .restaurant_btn .description_btn {
