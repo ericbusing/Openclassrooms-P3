@@ -1,9 +1,15 @@
 @import "./utils/variables.sass";
 @import "./utils/mixins.sass";
-@import "./layout/mise_en_page";
-@import "./animations/animations";
+@import "./layout/mise_en_page.sass";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@keyframes done_spin
+    from
+        transform: rotate(270deg);
+    to
+        transform: rotate(0deg);
+
 header
     box-shadow: none;
 .menu_list
@@ -14,23 +20,31 @@ header
         padding-bottom: 3px;
 .heart
     @include heart;
-    top: 2.5%;
+    top: 2%;
 .restaurant_btn
     @include restaurant_btn;
     .description_btn
-        padding: 5px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         width: 100%;
         text-align: left;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     h3
         font-size: 18px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 20px;
+        padding-top: 4px;
+        margin: 5px 0;
     p
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        margin-top: 0;
-        margin-bottom: 10px;
+        margin: 0;
         height: 15px;
         padding-top: 2px;
     .price
@@ -42,21 +56,29 @@ header
         padding-right: 25px;
     .done_box
         display: flex;
-        align-items: center;        
+        align-items: center;
+        justify-content: center;
         background-color: $color_tertiary;
         margin-right: -90px;
         width: 30%;
-        border-radius: 0 15px 15px 0;
         transition: all 0.5s;
     &:hover .done_box
         margin-right: 0;
-        animation: animation.done_spin;
+    .done_rotate
+        display: flex;
+        width: 25px;
+        height: 25px;
+        border-radius: 150px;
+        background: white;
+        align-items: center;
+        justify-content: center;
     .done
         background: white;
         background-clip: text;
-        color: transparent;
-        font-size: 34px;
-        padding-left: 15px;
+        color: $color_tertiary;
+        font-size: 18px;
+    &:hover .done
+        animation: done_spin 0.6s ease-in-out;
 .order
     display: flex;
     justify-content: center;

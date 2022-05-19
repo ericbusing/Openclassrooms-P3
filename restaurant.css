@@ -64,6 +64,10 @@ nav div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 90%;
 }
 
 .restaurant_title p {
@@ -78,13 +82,17 @@ nav div {
   margin-top: -55px;
   background: #eaeaea;
   border-radius: 40px 40px 0 0;
+  padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu_list {
@@ -136,8 +144,8 @@ footer ul li a {
 
 @-webkit-keyframes done_spin {
   from {
-    -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
   to {
     -webkit-transform: rotate(0deg);
@@ -147,8 +155,8 @@ footer ul li a {
 
 @keyframes done_spin {
   from {
-    -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
   to {
     -webkit-transform: rotate(0deg);
@@ -172,7 +180,7 @@ header {
   position: absolute;
   right: 32px;
   top: 20%;
-  top: 2.5%;
+  top: 2%;
 }
 
 .heart .fa-solid, .heart .fa-regular {
@@ -214,7 +222,7 @@ header {
 }
 
 .restaurant_btn .description_btn {
-  padding: 5px;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,18 +232,26 @@ header {
           flex-direction: column;
   width: 100%;
   text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .restaurant_btn h3 {
   font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 20px;
+  padding-top: 4px;
+  margin: 5px 0;
 }
 
 .restaurant_btn p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0;
   height: 15px;
   padding-top: 2px;
 }
@@ -260,10 +276,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #99e2d0;
   margin-right: -90px;
   width: 30%;
-  border-radius: 0 15px 15px 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -272,12 +290,32 @@ header {
   margin-right: 0;
 }
 
+.restaurant_btn .done_rotate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border-radius: 150px;
+  background: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .restaurant_btn .done {
   background: white;
   background-clip: text;
-  color: transparent;
-  font-size: 34px;
-  padding-left: 15px;
+  color: #99e2d0;
+  font-size: 18px;
+}
+
+.restaurant_btn:hover .done {
+  -webkit-animation: done_spin 0.6s ease-in-out;
+          animation: done_spin 0.6s ease-in-out;
 }
 
 .order {
