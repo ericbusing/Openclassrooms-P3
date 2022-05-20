@@ -1,0 +1,50 @@
+@mixin color_form 
+    background-color: $grey
+
+@mixin border_btn
+    border-radius: 20px
+    border: none
+
+@mixin shadow_btn
+    box-shadow: 1px 1px 10px 8px $color_shadow_btn
+
+@mixin darken_shadow_btn
+    box-shadow: 1px 1px 10px 8px darken($color_shadow_btn, 5%)
+
+@mixin lighten_color_btn
+    background: lighten($grey, 5%)
+
+@mixin shadow_card
+    box-shadow: 0px 3px 8px $color_shadow_btn
+
+@mixin restaurant_btn
+    display: flex
+    width: 100%
+    border-radius: 15px
+    line-height: 0.5
+    border: none
+    background: white
+    padding: 0
+    margin-bottom: 20px
+    box-shadow: 1px 1px 10px 8px $color_shadow_btn
+    overflow: hidden
+    cursor: pointer
+
+@mixin heart
+    position: absolute
+    right: 32px
+    top: 20%     
+    .fa-solid
+        position: relative
+        color: transparent
+        font-size: 26px        
+        &:hover           
+            background: $gradient_color_heart
+            background-clip: text
+            color: transparent
+            animation: appear_heart 1s
+            cursor: pointer
+    .fa-regular
+        margin-right: -30px
+        position: absolute
+        font-size: 26px

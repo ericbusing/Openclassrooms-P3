@@ -1,0 +1,23 @@
+{
+  "name": "openclassrooms-p3",
+  "version": "1.0.0",
+  "description": "Projet OC 3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.sass css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericbusing/Openclassrooms-P3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericbusing/Openclassrooms-P3/issues"
+  },
+  "homepage": "https://github.com/ericbusing/Openclassrooms-P3#readme",
+  "dependencies": {
+    "sass": "^1.52.0"
+  },
+  "devDependencies": {}
+}
