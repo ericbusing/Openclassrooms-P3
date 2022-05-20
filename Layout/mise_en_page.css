@@ -104,6 +104,13 @@ nav div {
           flex-direction: column;
 }
 
+.menu_list h4 {
+  font-weight: 400;
+  border-bottom: 3px solid red;
+  width: 11%;
+  padding-bottom: 3px;
+}
+
 .menu_list p {
   width: 90%;
   padding-right: 20px;

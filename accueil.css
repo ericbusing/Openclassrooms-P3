@@ -99,6 +99,35 @@ nav div {
   padding-right: 20px;
 }
 
+.heart {
+  position: absolute;
+  right: 32px;
+  top: 20%;
+  top: 2%;
+}
+
+.heart .fa-solid {
+  position: relative;
+  color: transparent;
+  font-size: 26px;
+}
+
+.heart .fa-solid:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  -webkit-animation: appear_heart 1s;
+          animation: appear_heart 1s;
+  cursor: pointer;
+}
+
+.heart .fa-regular {
+  margin-right: -30px;
+  position: absolute;
+  font-size: 26px;
+}
+
 .restaurant_menu {
   position: relative;
   z-index: 1;
@@ -279,6 +308,44 @@ nav div {
           animation: done_spin 0.6s ease-in-out;
 }
 
+.order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.order .action_btn {
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  color: white;
+  width: 50%;
+  height: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  -webkit-box-shadow: 1px 1px 10px 8px #d7d7d7;
+          box-shadow: 1px 1px 10px 8px #d7d7d7;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+}
+
+.order .action_btn:hover {
+  -webkit-box-shadow: 1px 1px 10px 8px #cacaca;
+          box-shadow: 1px 1px 10px 8px #cacaca;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
 footer {
   background-color: #353535;
 }
@@ -378,6 +445,7 @@ form input {
 .explore .action_btn:hover {
   -webkit-box-shadow: 1px 1px 10px 8px #cacaca;
           box-shadow: 1px 1px 10px 8px #cacaca;
+  background: #f7f7f7;
 }
 
 article {
@@ -449,7 +517,7 @@ article {
 .functioning button:hover {
   -webkit-box-shadow: 1px 1px 10px 8px #cacaca;
           box-shadow: 1px 1px 10px 8px #cacaca;
-  background: #f2f2f2;
+  background: #f7f7f7;
 }
 
 .functioning i {
@@ -568,4 +636,4 @@ aside {
   position: absolute;
   font-size: 26px;
 }
-/*# sourceMappingURL=mobile.css.map */
+/*# sourceMappingURL=accueil.css.map */
