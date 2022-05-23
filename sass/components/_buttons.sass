@@ -29,15 +29,24 @@
         font-size: 18px
         text-overflow: ellipsis
         overflow: hidden
-        white-space: nowrap
-        height: 20px
-        padding-top: 4px
         margin: 5px 0
+        line-height: 1.25
+        white-space: normal
+        width: 100%
+        display: flex
+        align-items: flex-end
+    &:hover .h3
+        line-height: 1
+        white-space: normal
+        width: 100%
+        display: flex
+        align-items: flex-end
     p
         overflow: hidden
         white-space: nowrap
         text-overflow: ellipsis
         margin: 0
+        width: 100%
         height: 15px
         padding-top: 2px
     .price
@@ -53,7 +62,7 @@
         justify-content: center
         background-color: $color_tertiary
         margin-right: -90px
-        width: 30%
+        width: 90px
         transition: all 0.5s
     &:hover .done_box
         margin-right: 0
