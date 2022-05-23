@@ -1,0 +1,35 @@
+.restaurant_pic
+    width: 100%
+.restaurant_title
+    display: flex
+    justify-content: flex-start
+    width: 90%
+    p
+        font-size: 24px
+        font-family: 'Shrikhand'
+        margin-bottom: 0
+.menu_list
+    width: 90%
+    display: flex
+    flex-direction: column
+    h4
+        font-weight: 400
+        border-bottom: 3px solid $color_tertiary
+        width: 11%
+        padding-bottom: 3px
+    p
+        width: 90%
+        padding-right: 20px    
+.heart
+    @include heart
+    top: 2%
+.restaurant_menu 
+    position: relative
+    z-index: 1
+    margin-top: -55px
+    background: #eaeaea
+    border-radius: 40px 40px 0 0
+    padding-bottom: 50px
+    display: flex
+    flex-direction: column
+    align-items: center

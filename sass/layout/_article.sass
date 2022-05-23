@@ -1,0 +1,43 @@
+article
+    display: flex
+    flex-direction: column
+    align-items: center
+.functioning
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 80%
+    margin-bottom: 30px
+    h2
+        display: flex
+        justify-content: flex-start
+        width: 100%
+    .functioning_btn
+        display: flex
+        width: 100%
+    button
+        padding: 20px 0 20px 0
+        @include border_btn
+        @include shadow_btn
+        margin-bottom: 15px
+        width: 100%
+        margin-left: -10px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        &:hover
+            @include darken_shadow_btn
+            @include lighten_color_btn
+    i
+        font-size: 14px
+        padding-right: 20px
+    .number
+        border-radius: 25px
+        height: 20px
+        background-color: $color_primary
+        color: white
+        font-size: 10px
+        margin-top: 17px
+        padding: 4px 8px 0 6px
+        z-index: 1

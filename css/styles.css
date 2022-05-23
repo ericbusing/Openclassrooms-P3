@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @keyframes appear {
   0% {
     transform: translateY(50%);
@@ -65,55 +65,6 @@ nav div {
   display: flex;
   justify-content: center;
   width: 100%;
-}
-
-.explore {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f6f6f6;
-}
-.explore input {
-  outline: none;
-}
-.explore h3, .explore p {
-  text-align: center;
-  margin-left: 70px;
-  margin-right: 70px;
-}
-.explore p {
-  margin-left: 30px;
-  margin-right: 30px;
-}
-.explore .action_btn {
-  border-radius: 20px;
-  border: none;
-  padding: 15px 20px;
-  margin-bottom: 20px;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
-  box-shadow: 1px 1px 10px 8px #d7d7d7;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-}
-.explore .action_btn:hover {
-  box-shadow: 1px 1px 10px 8px #cacaca;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: #eaeaea;
-}
-form i {
-  margin-left: 50px;
-  padding-top: 10px;
-}
-form input {
-  padding: 10px 0 10px 15px;
-  border: none;
-  background-color: #eaeaea;
 }
 
 article {
@@ -185,21 +136,6 @@ aside {
   margin-left: -52%;
 }
 
-.new {
-  position: relative;
-}
-
-.new::before {
-  content: "Nouveau";
-  position: absolute;
-  background-color: #99e2d0;
-  color: #1b6150;
-  margin-left: 225px;
-  margin-top: 10px;
-  padding: 5px 10px;
-  border-radius: 3px;
-}
-
 .restaurant_card {
   width: 89%;
   height: 240px;
@@ -230,6 +166,21 @@ aside {
   line-height: 0;
 }
 
+.new {
+  position: relative;
+}
+
+.new::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: #99e2d0;
+  color: #1b6150;
+  margin-left: 225px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
 .heart {
   position: absolute;
   right: 32px;
@@ -251,6 +202,48 @@ aside {
   margin-right: -30px;
   position: absolute;
   font-size: 26px;
+}
+
+footer {
+  background-color: #353535;
+}
+footer img {
+  width: 150px;
+  filter: brightness(50);
+  padding-top: 20px;
+  padding-left: 30px;
+}
+footer ul {
+  list-style-type: none;
+  color: white;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+footer ul li i {
+  font-size: 12px;
+  padding-right: 15px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #eaeaea;
+}
+form i {
+  margin-left: 50px;
+  padding-top: 10px;
+}
+form input {
+  padding: 10px 0 10px 15px;
+  border: none;
+  background-color: #eaeaea;
 }
 
 .restaurant_pic {
@@ -320,7 +313,41 @@ aside {
   align-items: center;
 }
 
-.restaurant_btn {
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+.explore input {
+  outline: none;
+}
+.explore h3, .explore p {
+  text-align: center;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.explore p {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.explore .action_btn {
+  border-radius: 20px;
+  border: none;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  box-shadow: 1px 1px 10px 8px #d7d7d7;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+.explore .action_btn:hover {
+  box-shadow: 1px 1px 10px 8px #cacaca;
+}
+
+.menu_btn {
   display: flex;
   width: 100%;
   border-radius: 15px;
@@ -334,34 +361,34 @@ aside {
   cursor: pointer;
   animation: appear 1s;
 }
-.restaurant_btn--1 {
+.menu_btn--1 {
   animation-delay: 300ms;
 }
-.restaurant_btn--2 {
+.menu_btn--2 {
   animation-delay: 600ms;
 }
-.restaurant_btn--3 {
+.menu_btn--3 {
   animation-delay: 900ms;
 }
-.restaurant_btn--4 {
+.menu_btn--4 {
   animation-delay: 1200ms;
 }
-.restaurant_btn--5 {
+.menu_btn--5 {
   animation-delay: 1500ms;
 }
-.restaurant_btn--6 {
+.menu_btn--6 {
   animation-delay: 1800ms;
 }
-.restaurant_btn--7 {
+.menu_btn--7 {
   animation-delay: 2100ms;
 }
-.restaurant_btn--8 {
+.menu_btn--8 {
   animation-delay: 2400ms;
 }
-.restaurant_btn--9 {
+.menu_btn--9 {
   animation-delay: 2700ms;
 }
-.restaurant_btn .description_btn {
+.menu_btn .description_btn {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -371,7 +398,7 @@ aside {
   overflow: hidden;
   white-space: nowrap;
 }
-.restaurant_btn h3 {
+.menu_btn h3 {
   font-size: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -380,7 +407,7 @@ aside {
   padding-top: 4px;
   margin: 5px 0;
 }
-.restaurant_btn p {
+.menu_btn p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -388,7 +415,7 @@ aside {
   height: 15px;
   padding-top: 2px;
 }
-.restaurant_btn .price {
+.menu_btn .price {
   font-size: 14px;
   font-weight: bold;
   display: flex;
@@ -396,7 +423,7 @@ aside {
   padding-top: 25px;
   padding-right: 25px;
 }
-.restaurant_btn .done_box {
+.menu_btn .done_box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -405,10 +432,10 @@ aside {
   width: 30%;
   transition: all 0.5s;
 }
-.restaurant_btn:hover .done_box {
+.menu_btn:hover .done_box {
   margin-right: 0;
 }
-.restaurant_btn .done_rotate {
+.menu_btn .done_rotate {
   display: flex;
   width: 25px;
   height: 25px;
@@ -417,13 +444,13 @@ aside {
   align-items: center;
   justify-content: center;
 }
-.restaurant_btn .done {
+.menu_btn .done {
   background: white;
   background-clip: text;
   color: #99e2d0;
   font-size: 18px;
 }
-.restaurant_btn:hover .done {
+.menu_btn:hover .done {
   animation: done_spin 0.6s ease-in-out;
 }
 
@@ -448,32 +475,6 @@ aside {
 .order .action_btn:hover {
   box-shadow: 1px 1px 10px 8px #cacaca;
   transform: scale(1.15);
-}
-
-footer {
-  background-color: #353535;
-}
-footer img {
-  width: 150px;
-  filter: brightness(50);
-  padding-top: 20px;
-  padding-left: 30px;
-}
-footer ul {
-  list-style-type: none;
-  color: white;
-  padding-left: 30px;
-  padding-bottom: 30px;
-  line-height: 1.5;
-  margin-bottom: 0;
-}
-footer ul li i {
-  font-size: 12px;
-  padding-right: 15px;
-}
-footer ul li a {
-  text-decoration: none;
-  color: inherit;
 }
 
 /*# sourceMappingURL=styles.css.map */

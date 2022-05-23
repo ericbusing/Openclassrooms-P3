@@ -1,0 +1,46 @@
+aside
+    background-color: $grey
+.restaurants
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-bottom: 40px
+    h2
+        padding-top: 20px
+        margin-left: -52%
+.restaurant_card
+    width: 89%
+    height: 240px
+    border-radius: 20px
+    margin-bottom: 20px
+    background-color: white
+    @include shadow_card
+    a
+        text-decoration: none
+        color: inherit
+    figure
+        margin: auto
+    img
+        border-radius: 20px 20px 0 0
+        width: 100% 
+        height: 150px
+        object-fit: cover
+        object-position: 25% 60%
+    figcaption
+        position: relative
+        margin-left: 15px
+    p
+        line-height: 0
+.new
+    position: relative
+.new::before
+    content: "Nouveau"
+    position: absolute
+    background-color: $color_tertiary
+    color: darken($color_tertiary, 50%)
+    margin-left: 225px
+    margin-top: 10px
+    padding: 5px 10px
+    border-radius: 3px
+.heart
+    @include heart

@@ -1,0 +1,92 @@
+.explore
+    .action_btn
+        @include border_btn
+        padding: 15px 20px
+        margin-bottom: 20px
+        background: $gradient_color
+        @include shadow_btn
+        color: white
+        font-size: 14px
+        cursor: pointer
+        &:hover
+            @include darken_shadow_btn
+.menu_btn
+    @include menu_btn
+    animation: appear 1s
+    @for $i from 1 through 9
+        &--#{$i}
+            animation-delay: 300ms * $i
+    .description_btn
+        padding: 10px
+        display: flex
+        flex-direction: column
+        width: 100%
+        text-align: left
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+    h3
+        font-size: 18px
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        height: 20px
+        padding-top: 4px
+        margin: 5px 0
+    p
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+        margin: 0
+        height: 15px
+        padding-top: 2px
+    .price
+        font-size: 14px
+        font-weight: bold
+        display: flex
+        align-items: center
+        padding-top: 25px
+        padding-right: 25px
+    .done_box
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $color_tertiary
+        margin-right: -90px
+        width: 30%
+        transition: all 0.5s
+    &:hover .done_box
+        margin-right: 0
+    .done_rotate
+        display: flex
+        width: 25px
+        height: 25px
+        border-radius: 150px
+        background: white
+        align-items: center
+        justify-content: center
+    .done
+        background: white
+        background-clip: text
+        color: $color_tertiary
+        font-size: 18px
+    &:hover .done
+        animation: done_spin 0.6s ease-in-out
+.order
+    display: flex
+    justify-content: center
+    .action_btn
+        background: $gradient_color
+        color: white
+        width: 50%
+        height: 40px
+        font-size: 14px
+        cursor: pointer
+        @include border_btn
+        @include shadow_btn
+        transform: scale(1)
+        transition-property: transform
+        transition-duration: 1000ms
+        &:hover
+            @include darken_shadow_btn
+            transform: scale(1.15)
