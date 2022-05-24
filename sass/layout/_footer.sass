@@ -1,10 +1,15 @@
 footer
     background-color: #353535
-    img
-        width: 150px
-        filter: brightness(50)
+    h3 
+        font-family: Shrikhand
+        font-size: 24px
+        color: white
         padding-top: 20px
         padding-left: 30px
+        margin: 0
+        @include desktop_min
+            text-align: center
+            padding-left: 0
     ul
         list-style-type: none
         color: white
@@ -12,6 +17,10 @@ footer
         padding-bottom: 30px
         line-height: 1.5
         margin-bottom: 0
+        @include desktop_min
+            display: flex
+            flex-direction: row
+            justify-content: space-around
         li
             i
                 font-size: 12px

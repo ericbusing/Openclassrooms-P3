@@ -3,6 +3,9 @@ article
     flex-direction: column
     align-items: center
     h2
+        @include desktop_min
+            text-align: center
+        @include mobile_only
         text-align: left
         width: 80%
 .functioning
@@ -11,6 +14,11 @@ article
     align-items: center
     width: 80%
     margin-bottom: 30px
+    @include desktop_min
+        display: flex
+        flex-direction: row
+        margin-bottom: 30px
+        gap: 50px
     .functioning_btn
         display: flex
         width: 100%

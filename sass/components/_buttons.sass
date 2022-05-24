@@ -10,6 +10,9 @@
         cursor: pointer
         &:hover
             @include darken_shadow_btn
+.list_btn
+    @include desktop_min
+        @include menu_btn_desktop
 .menu_btn
     @include menu_btn
     animation: appear 1s
@@ -64,8 +67,11 @@
         margin-right: -90px
         width: 90px
         transition: all 0.5s
-    &:hover .done_box
+    &:focus .done_box
         margin-right: 0
+    @include tablet_min
+        &:hover .done_box
+            margin-right: 0
     .done_rotate
         display: flex
         width: 25px
@@ -79,8 +85,11 @@
         background-clip: text
         color: $color_tertiary
         font-size: 18px
-    &:hover .done
+    &:focus .done
         animation: done_spin 0.6s ease-in-out
+    @include tablet_min
+        &:hover .done
+            animation: done_spin 0.6s ease-in-out
 .order
     display: flex
     justify-content: center
@@ -96,6 +105,8 @@
         transform: scale(1)
         transition-property: transform
         transition-duration: 1000ms
+        @include desktop_min
+            width: 30%
         &:hover
             @include darken_shadow_btn
             transform: scale(1.15)

@@ -48,3 +48,24 @@
         margin-right: -30px
         position: absolute
         font-size: 26px
+@mixin mobile_only
+    @media screen and (max-width: map-get($breakpoints, mobile))
+        @content
+@mixin desktop_min
+    @media screen and (min-width: map-get($breakpoints, desktop_min))
+        @content
+@mixin desktop-max
+    @media screen and (max-width: map-get($breakpoints, desktop_max))
+        @content
+@mixin tablet_max
+    @media screen and (max-width: map-get($breakpoints, tablet_max))
+        @content
+@mixin tablet_min
+    @media screen and (min-width: map-get($breakpoints, tablet_min))
+        @content
+@mixin menu_btn_desktop
+    display: flex
+    justify-content: center
+    gap: 60px
+    div
+        width: 35%
