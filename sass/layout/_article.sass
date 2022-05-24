@@ -4,7 +4,7 @@ article
     align-items: center
     h2
         @include desktop_min
-            text-align: center
+        text-align: center
         @include mobile_only
         text-align: left
         width: 80%
@@ -23,15 +23,15 @@ article
         display: flex
         width: 100%
     button
-        padding: 20px 0 20px 0
-        @include border_btn
-        @include shadow_btn
-        margin-bottom: 15px
-        width: 100%
-        margin-left: -10px
         display: flex
         align-items: center
         justify-content: center
+        padding: 20px 0 20px 0
+        margin-bottom: 15px
+        margin-left: -10px
+        width: 100%
+        @include border_btn
+        @include shadow_btn
         cursor: pointer
         &:hover
             @include darken_shadow_btn

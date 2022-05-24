@@ -94,13 +94,9 @@ article {
   align-items: center;
 }
 article h2 {
+  text-align: center;
   text-align: left;
   width: 80%;
-}
-@media screen and (min-width: ) {
-  article h2 {
-    text-align: center;
-  }
 }
 .functioning {
   display: flex;
@@ -109,7 +105,7 @@ article h2 {
   width: 80%;
   margin-bottom: 30px;
 }
-@media screen and (min-width: ) {
+@media screen and (min-width: 1024px) {
   .functioning {
     display: flex;
     flex-direction: row;
@@ -122,20 +118,20 @@ article h2 {
   width: 100%;
 }
 .functioning button {
-  padding: 20px 0 20px 0;
-  border-radius: 20px;
-  border: none;
-  box-shadow: 1px 1px 10px 8px #d7d7d7;
-  margin-bottom: 15px;
-  width: 100%;
-  margin-left: -10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 0 20px 0;
+  margin-bottom: 15px;
+  margin-left: -10px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 1px 1px 10px 8px #d7d7d7;
   cursor: pointer;
 }
 .functioning button:hover {
-  box-shadow: 1px 1px 10px 8px #cacaca;
+  box-shadow: 1px 1px 10px 8px #b1b1b1;
   background: #f7f7f7;
 }
 .functioning i {
@@ -164,7 +160,7 @@ aside h2 {
   padding-top: 30px;
   width: 90%;
 }
-@media screen and (min-width: ) {
+@media screen and (min-width: 1024px) {
   aside h2 {
     text-align: center;
     margin-left: 0;
@@ -178,13 +174,13 @@ aside h2 {
   padding-bottom: 40px;
   width: 90%;
 }
-@media screen and (min-width: ) {
+@media screen and (min-width: 1024px) {
   .restaurants {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
@@ -196,7 +192,7 @@ aside h2 {
   background-color: white;
   box-shadow: 0px 3px 8px #d7d7d7;
 }
-@media screen and (min-width: ) {
+@media screen and (min-width: 1024px) {
   .restaurant_card {
     width: 40%;
     height: 290px;
@@ -218,7 +214,7 @@ aside h2 {
   object-fit: cover;
   object-position: 25% 60%;
 }
-@media screen and (min-width: ) {
+@media screen and (min-width: 1024px) {
   .restaurant_card img {
     height: 190px;
   }
@@ -226,9 +222,16 @@ aside h2 {
 .restaurant_card figcaption {
   position: relative;
   margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.restaurant_card h3 {
+  margin-bottom: 0;
+  margin-top: 10px;
 }
 .restaurant_card p {
   line-height: 0;
+  margin-bottom: 0;
 }
 
 .new {
@@ -252,14 +255,22 @@ aside h2 {
 }
 
 .heart {
-  position: absolute;
-  right: 32px;
-  top: 20%;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -10px;
 }
 .heart .fa-solid {
   position: relative;
   color: transparent;
   font-size: 26px;
+  padding: 0;
+}
+@media screen and (min-width: 1024px) {
+  .heart .fa-solid {
+    font-size: 37px;
+    padding: 0;
+  }
 }
 .heart .fa-solid:hover {
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
@@ -269,9 +280,21 @@ aside h2 {
   cursor: pointer;
 }
 .heart .fa-regular {
-  margin-right: -30px;
   position: absolute;
   font-size: 26px;
+  padding: 0;
+}
+@media screen and (min-width: 1024px) {
+  .heart .fa-regular {
+    font-size: 37px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .heart {
+    position: initial;
+    padding-top: 7px;
+  }
 }
 
 footer {
@@ -285,7 +308,7 @@ footer h3 {
   padding-left: 30px;
   margin: 0;
 }
-@media screen and (min-width: ) {
+@media screen and (min-width: 1024px) {
   footer h3 {
     text-align: center;
     padding-left: 0;
@@ -299,7 +322,7 @@ footer ul {
   line-height: 1.5;
   margin-bottom: 0;
 }
-@media screen and (min-width: ) {
+@media screen and (min-width: 1024px) {
   footer ul {
     display: flex;
     flex-direction: row;
@@ -318,8 +341,8 @@ footer ul li a {
 form {
   display: flex;
   justify-content: center;
-  width: 100%;
   background-color: #eaeaea;
+  width: 100%;
 }
 form i {
   margin-left: 50px;
@@ -328,7 +351,7 @@ form i {
 form input {
   padding: 10px 0 10px 15px;
   border: none;
-  background-color: #eaeaea;
+  background: #eaeaea;
 }
 
 .restaurant_pic {
@@ -337,19 +360,43 @@ form input {
 
 .restaurant_title {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 90%;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    width: 32%;
+    padding: 20px;
+  }
 }
 .restaurant_title p {
   font-size: 24px;
   font-family: "Shrikhand";
   margin-bottom: 0;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant_title p {
+    font-size: 35px;
+    margin-top: 0;
+  }
+}
 
 .menu_list {
-  width: 90%;
   display: flex;
   flex-direction: column;
+  width: 90%;
+}
+@media screen and (min-width: 1024px) {
+  .menu_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .menu_list h4 {
   font-weight: 400;
@@ -361,40 +408,16 @@ form input {
   width: 90%;
 }
 
-.heart {
-  position: absolute;
-  right: 32px;
-  top: 20%;
-  top: 2%;
-}
-.heart .fa-solid {
-  position: relative;
-  color: transparent;
-  font-size: 26px;
-}
-.heart .fa-solid:hover {
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: text;
-  color: transparent;
-  animation: appear_heart 1s;
-  cursor: pointer;
-}
-.heart .fa-regular {
-  margin-right: -30px;
-  position: absolute;
-  font-size: 26px;
-}
-
 .restaurant_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   z-index: 1;
   margin-top: -55px;
   background: #eaeaea;
   border-radius: 40px 40px 0 0;
   padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .explore {
@@ -417,28 +440,25 @@ form input {
 }
 
 .explore .action_btn {
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
   border-radius: 20px;
   border: none;
   padding: 15px 20px;
   margin-bottom: 20px;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
   box-shadow: 1px 1px 10px 8px #d7d7d7;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
 }
 .explore .action_btn:hover {
-  box-shadow: 1px 1px 10px 8px #cacaca;
+  box-shadow: 1px 1px 10px 8px #b1b1b1;
 }
 
-@media screen and (min-width: ) {
+@media screen and (min-width: 1024px) {
   .list_btn {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 60px;
-  }
-  .list_btn div {
-    width: 35%;
   }
 }
 
@@ -484,9 +504,9 @@ form input {
   animation-delay: 2700ms;
 }
 .menu_btn .description_btn {
-  padding: 10px;
   display: flex;
   flex-direction: column;
+  padding: 10px;
   width: 100%;
   text-align: left;
   text-overflow: ellipsis;
@@ -494,6 +514,8 @@ form input {
   white-space: nowrap;
 }
 .menu_btn h3 {
+  display: flex;
+  align-items: flex-end;
   font-size: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -501,15 +523,13 @@ form input {
   line-height: 1.25;
   white-space: normal;
   width: 100%;
-  display: flex;
-  align-items: flex-end;
 }
 .menu_btn:hover .h3 {
+  display: flex;
+  align-items: flex-end;
   line-height: 1;
   white-space: normal;
   width: 100%;
-  display: flex;
-  align-items: flex-end;
 }
 .menu_btn p {
   overflow: hidden;
@@ -521,10 +541,10 @@ form input {
   padding-top: 2px;
 }
 .menu_btn .price {
-  font-size: 14px;
-  font-weight: bold;
   display: flex;
   align-items: center;
+  font-size: 14px;
+  font-weight: bold;
   padding-top: 25px;
   padding-right: 25px;
 }
@@ -547,12 +567,12 @@ form input {
 }
 .menu_btn .done_rotate {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 25px;
   height: 25px;
   border-radius: 150px;
   background: white;
-  align-items: center;
-  justify-content: center;
 }
 .menu_btn .done {
   background: white;
@@ -573,27 +593,33 @@ form input {
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 1024px) {
+  .order {
+    width: 20%;
+    margin-top: 20px;
+  }
+}
 .order .action_btn {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
-  color: white;
-  width: 50%;
-  height: 40px;
   font-size: 14px;
   cursor: pointer;
+  color: white;
   border-radius: 20px;
   border: none;
   box-shadow: 1px 1px 10px 8px #d7d7d7;
+  width: 50%;
+  height: 40px;
   transform: scale(1);
   transition-property: transform;
   transition-duration: 1000ms;
 }
-@media screen and (min-width: ) {
+@media screen and (min-width: 1024px) {
   .order .action_btn {
-    width: 30%;
+    width: 100%;
   }
 }
 .order .action_btn:hover {
-  box-shadow: 1px 1px 10px 8px #cacaca;
+  box-shadow: 1px 1px 10px 8px #b1b1b1;
   transform: scale(1.15);
 }
 
@@ -619,7 +645,7 @@ form input {
   z-index: 10001;
   background: #9356DC;
   opacity: 0.6;
-  animation: background_spinner 4s ease forwards;
+  animation: background_spinner 6s ease forwards;
 }
 
 .loading_spinner::after {
@@ -635,7 +661,7 @@ form input {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  animation: loading_spinner 2s ease forwards;
+  animation: loading_spinner 6s ease forwards;
 }
 
 /*# sourceMappingURL=styles.css.map */

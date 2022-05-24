@@ -1,13 +1,9 @@
 .explore
     .action_btn
-        @include border_btn
+        @include action_btn
         padding: 15px 20px
         margin-bottom: 20px
-        background: $gradient_color
         @include shadow_btn
-        color: white
-        font-size: 14px
-        cursor: pointer
         &:hover
             @include darken_shadow_btn
 .list_btn
@@ -20,15 +16,17 @@
         &--#{$i}
             animation-delay: 300ms * $i
     .description_btn
-        padding: 10px
         display: flex
         flex-direction: column
+        padding: 10px
         width: 100%
         text-align: left
         text-overflow: ellipsis
         overflow: hidden
         white-space: nowrap
     h3
+        display: flex
+        align-items: flex-end
         font-size: 18px
         text-overflow: ellipsis
         overflow: hidden
@@ -36,14 +34,12 @@
         line-height: 1.25
         white-space: normal
         width: 100%
+    &:hover .h3
         display: flex
         align-items: flex-end
-    &:hover .h3
         line-height: 1
         white-space: normal
         width: 100%
-        display: flex
-        align-items: flex-end
     p
         overflow: hidden
         white-space: nowrap
@@ -53,10 +49,10 @@
         height: 15px
         padding-top: 2px
     .price
-        font-size: 14px
-        font-weight: bold
         display: flex
         align-items: center
+        font-size: 14px
+        font-weight: bold
         padding-top: 25px
         padding-right: 25px
     .done_box
@@ -74,12 +70,12 @@
             margin-right: 0
     .done_rotate
         display: flex
+        align-items: center
+        justify-content: center
         width: 25px
         height: 25px
         border-radius: 150px
         background: white
-        align-items: center
-        justify-content: center
     .done
         background: white
         background-clip: text
@@ -93,20 +89,21 @@
 .order
     display: flex
     justify-content: center
+    @include desktop_min
+        width: 20%
+        margin-top: 20px
     .action_btn
-        background: $gradient_color
-        color: white
+        @include action_btn
+        @include shadow_btn
         width: 50%
         height: 40px
-        font-size: 14px
-        cursor: pointer
-        @include border_btn
-        @include shadow_btn
         transform: scale(1)
         transition-property: transform
         transition-duration: 1000ms
         @include desktop_min
-            width: 30%
+            width: 100%
         &:hover
             @include darken_shadow_btn
             transform: scale(1.15)
+
+            
