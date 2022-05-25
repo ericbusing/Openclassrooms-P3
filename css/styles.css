@@ -1,3 +1,4 @@
+/*responsive*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @keyframes appear {
@@ -30,6 +31,14 @@
     transform: rotate(0deg);
   }
 }
+@keyframes done_slide {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(100%);
+  }
+}
 @keyframes loading_spinner {
   0% {
     transform: rotate(0deg);
@@ -60,44 +69,67 @@ body {
   margin: 0;
 }
 
-header {
+/*home page*/
+.header {
   display: flex;
   justify-content: center;
   box-shadow: 0 8px 5px -5px #797979;
-  padding-bottom: 20px;
   margin-bottom: 3px;
-  padding-top: 20px;
+  padding: 20px 0;
 }
-header img {
+.header img {
   width: 150px;
 }
 
-nav {
+/*restaurant*/
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+header nav {
   display: flex;
   width: 90%;
 }
-nav a {
+header nav a {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: inherit;
 }
-nav div {
+@media screen and (min-width: 1024px) {
+  header nav i {
+    font-size: 26px;
+  }
+}
+header nav div {
   display: flex;
   justify-content: center;
   width: 100%;
 }
+header nav div img {
+  width: 150px;
+}
 
+/*home page*/
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-article h2 {
-  text-align: center;
-  text-align: left;
-  width: 80%;
+@media screen and (min-width: 1024px) {
+  article h2 {
+    font-size: 28px;
+    text-align: center;
+  }
 }
+@media screen and (max-width: 599px) {
+  article h2 {
+    text-align: left;
+    width: 80%;
+  }
+}
+
 .functioning {
   display: flex;
   flex-direction: column;
@@ -127,11 +159,10 @@ article h2 {
   width: 100%;
   border-radius: 20px;
   border: none;
-  box-shadow: 1px 1px 10px 8px #d7d7d7;
   cursor: pointer;
 }
 .functioning button:hover {
-  box-shadow: 1px 1px 10px 8px #b1b1b1;
+  box-shadow: 6px 6px 10px 5px #979797;
   background: #f7f7f7;
 }
 .functioning i {
@@ -149,6 +180,7 @@ article h2 {
   z-index: 1;
 }
 
+/*home page*/
 aside {
   background-color: #eaeaea;
   display: flex;
@@ -164,6 +196,7 @@ aside h2 {
   aside h2 {
     text-align: center;
     margin-left: 0;
+    font-size: 28px;
   }
 }
 
@@ -229,9 +262,19 @@ aside h2 {
   margin-bottom: 0;
   margin-top: 10px;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant_card h3 {
+    font-size: 26px;
+  }
+}
 .restaurant_card p {
   line-height: 0;
   margin-bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant_card p {
+    font-size: 18px;
+  }
 }
 
 .new {
@@ -248,52 +291,19 @@ aside h2 {
   padding: 5px 10px;
   border-radius: 3px;
 }
+@media screen and (max-width: 599px) {
+  .new::before {
+    margin-left: 70%;
+  }
+}
 @media screen and (min-width: 600px) {
   .new::before {
-    margin-left: 87%;
-  }
-}
-
-.heart {
-  width: 90%;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: -10px;
-}
-.heart .fa-solid {
-  position: relative;
-  color: transparent;
-  font-size: 26px;
-  padding: 0;
-}
-@media screen and (min-width: 1024px) {
-  .heart .fa-solid {
-    font-size: 37px;
-    padding: 0;
-  }
-}
-.heart .fa-solid:hover {
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: text;
-  color: transparent;
-  animation: appear_heart 1s;
-  cursor: pointer;
-}
-.heart .fa-regular {
-  position: absolute;
-  font-size: 26px;
-  padding: 0;
-}
-@media screen and (min-width: 1024px) {
-  .heart .fa-regular {
-    font-size: 37px;
-    padding: 0;
+    margin-left: 80%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .heart {
-    position: initial;
-    padding-top: 7px;
+  .new::before {
+    margin-left: 75%;
   }
 }
 
@@ -338,6 +348,7 @@ footer ul li a {
   color: inherit;
 }
 
+/*home page*/
 form {
   display: flex;
   justify-content: center;
@@ -354,14 +365,46 @@ form input {
   background: #eaeaea;
 }
 
+/*restaurant*/
 .restaurant_pic {
   width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant_pic {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+}
+
+.restaurant_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-top: -55px;
+  background: #eaeaea;
+  border-radius: 40px 40px 0 0;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant_menu {
+    width: 95%;
+    margin: auto;
+    margin-top: -55px;
+  }
 }
 
 .restaurant_title {
   display: flex;
   justify-content: space-between;
   width: 90%;
+}
+@media screen and (max-width: 1024px) {
+  .restaurant_title {
+    padding-top: 20px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .restaurant_title {
@@ -370,18 +413,20 @@ form input {
     justify-content: center;
     align-items: center;
     background-color: #eaeaea;
-    width: 32%;
+    width: 40%;
     padding: 20px;
+    padding-bottom: 0;
   }
 }
 .restaurant_title p {
   font-size: 24px;
   font-family: "Shrikhand";
-  margin-bottom: 0;
+  margin: 0;
 }
 @media screen and (min-width: 1024px) {
   .restaurant_title p {
     font-size: 35px;
+    text-align: center;
     margin-top: 0;
   }
 }
@@ -396,6 +441,7 @@ form input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 99%;
   }
 }
 .menu_list h4 {
@@ -408,18 +454,7 @@ form input {
   width: 90%;
 }
 
-.restaurant_menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  margin-top: -55px;
-  background: #eaeaea;
-  border-radius: 40px 40px 0 0;
-  padding-bottom: 50px;
-}
-
+/*home page*/
 .explore {
   display: flex;
   flex-direction: column;
@@ -439,27 +474,144 @@ form input {
   margin-right: 30px;
 }
 
+/*home page*/
+.heart_home_page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: -30px;
+  margin-right: 30px;
+}
+.heart_home_page .fa-solid {
+  position: relative;
+  color: transparent;
+  font-size: 26px;
+  padding: 0;
+}
+.heart_home_page .fa-solid:hover {
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  animation: appear_heart 0.5s;
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .heart_home_page .fa-solid {
+    font-size: 32px;
+  }
+  .heart_home_page .fa-solid:hover {
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    background-clip: text;
+    color: transparent;
+    animation: appear_heart 0.5s;
+    cursor: pointer;
+  }
+}
+.heart_home_page .fa-regular {
+  position: absolute;
+  font-size: 26px;
+  padding: 0;
+}
+@media screen and (min-width: 600px) {
+  .heart_home_page .fa-regular {
+    font-size: 32px;
+  }
+}
+
+/*restaurant*/
+.heart {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -10px;
+}
+.heart .fa-solid {
+  position: relative;
+  color: transparent;
+  font-size: 26px;
+  padding: 0;
+}
+.heart .fa-solid:hover {
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  animation: appear_heart 0.5s;
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .heart .fa-solid {
+    font-size: 32px;
+  }
+  .heart .fa-solid:hover {
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    background-clip: text;
+    color: transparent;
+    animation: appear_heart 0.5s;
+    cursor: pointer;
+  }
+}
+.heart .fa-regular {
+  position: absolute;
+  font-size: 26px;
+  padding: 0;
+}
+@media screen and (min-width: 600px) {
+  .heart .fa-regular {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .heart {
+    margin: 0;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .heart {
+    position: initial;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/*home page*/
 .explore .action_btn {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
   color: white;
   border-radius: 20px;
   border: none;
   padding: 15px 20px;
   margin-bottom: 20px;
-  box-shadow: 1px 1px 10px 8px #d7d7d7;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 1000ms;
 }
 .explore .action_btn:hover {
-  box-shadow: 1px 1px 10px 8px #b1b1b1;
+  box-shadow: 6px 6px 10px 5px #979797;
+  transform: scale(1.025);
+  opacity: 0.7;
 }
 
+/*restaurant*/
 @media screen and (min-width: 1024px) {
   .list_btn {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 30%;
+    height: 410px;
   }
+}
+.list_btn .div {
+  width: 100%;
 }
 
 .menu_btn {
@@ -471,7 +623,6 @@ form input {
   background: white;
   padding: 0;
   margin-bottom: 20px;
-  box-shadow: 1px 1px 10px 8px #d7d7d7;
   overflow: hidden;
   cursor: pointer;
   animation: appear 1s;
@@ -528,7 +679,7 @@ form input {
   display: flex;
   align-items: flex-end;
   line-height: 1;
-  white-space: normal;
+  white-space: nowrap;
   width: 100%;
 }
 .menu_btn p {
@@ -539,6 +690,11 @@ form input {
   width: 100%;
   height: 15px;
   padding-top: 2px;
+}
+.menu_btn p:hover {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu_btn .price {
   display: flex;
@@ -557,13 +713,13 @@ form input {
   width: 90px;
   transition: all 0.5s;
 }
-.menu_btn:focus .done_box {
-  margin-right: 0;
-}
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   .menu_btn:hover .done_box {
     margin-right: 0;
   }
+}
+.menu_btn:focus .done_box {
+  margin-right: 0;
 }
 .menu_btn .done_rotate {
   display: flex;
@@ -580,49 +736,43 @@ form input {
   color: #99e2d0;
   font-size: 18px;
 }
-.menu_btn:focus .done {
-  animation: done_spin 0.6s ease-in-out;
-}
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   .menu_btn:hover .done {
-    animation: done_spin 0.6s ease-in-out;
+    animation: done_spin 0.5s ease-in-out;
   }
+}
+.menu_btn:focus .done {
+  animation: done_spin 0.5s ease-in-out;
 }
 
 .order {
   display: flex;
   justify-content: center;
-}
-@media screen and (min-width: 1024px) {
-  .order {
-    width: 20%;
-    margin-top: 20px;
-  }
+  width: 130px;
 }
 .order .action_btn {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
   color: white;
   border-radius: 20px;
   border: none;
-  box-shadow: 1px 1px 10px 8px #d7d7d7;
-  width: 50%;
+  width: 100%;
   height: 40px;
   transform: scale(1);
   transition-property: transform;
   transition-duration: 1000ms;
-}
-@media screen and (min-width: 1024px) {
-  .order .action_btn {
-    width: 100%;
-  }
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .order .action_btn:hover {
-  box-shadow: 1px 1px 10px 8px #b1b1b1;
-  transform: scale(1.15);
+  box-shadow: 6px 6px 10px 5px #979797;
+  transform: scale(1.025);
+  opacity: 0.7;
 }
 
+/*home page*/
 .content_loading_spinner {
   width: 100%;
   margin: 0;
@@ -644,7 +794,7 @@ form input {
   height: 100%;
   z-index: 10001;
   background: #9356DC;
-  opacity: 0.6;
+  opacity: 1;
   animation: background_spinner 6s ease forwards;
 }
 
@@ -653,7 +803,7 @@ form input {
   z-index: 10002;
   content: "";
   position: absolute;
-  top: 15%;
+  top: 25%;
   left: 50%;
   margin: -25px 0 0 -25px;
   border: 5px solid #FF79DA;
@@ -662,6 +812,12 @@ form input {
   width: 100px;
   height: 100px;
   animation: loading_spinner 6s ease forwards;
+}
+@media screen and (max-width: 599px) {
+  .loading_spinner::after {
+    top: 15%;
+    left: 45%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

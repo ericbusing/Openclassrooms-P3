@@ -6,7 +6,7 @@
 
 @mixin action_btn
     background: $gradient_color
-    font-size: 14px
+    font-size: 17px
     cursor: pointer
     color: white
     border-radius: 20px
@@ -16,11 +16,8 @@
     border-radius: 20px
     border: none
 
-@mixin shadow_btn
-    box-shadow: 1px 1px 10px 8px $color_shadow_btn
-
 @mixin darken_shadow_btn
-    box-shadow: 1px 1px 10px 8px darken($color_shadow_btn, 15%)
+    box-shadow: 6px 6px 10px 5px darken($color_shadow_btn, 25%)
 
 @mixin lighten_color_btn
     background: lighten($grey, 5%)
@@ -37,37 +34,44 @@
     background: white
     padding: 0
     margin-bottom: 20px
-    box-shadow: 1px 1px 10px 8px $color_shadow_btn
     overflow: hidden
     cursor: pointer
 
-@mixin heart   
-    width: 90%
-    display: flex
-    justify-content: flex-end
-    margin-top: -10px
+@mixin animation_heart   
     .fa-solid
         position: relative
         color: transparent
         font-size: 26px
         padding: 0
-        @include desktop_min
-            font-size: 37px
-            padding: 0
         &:hover           
             background: $gradient_color_heart
             background-clip: text
             color: transparent
-            animation: appear_heart 1s
+            animation: appear_heart 0.5s
             cursor: pointer
+        @include tablet_min
+            font-size: 32px
+            &:hover           
+                background: $gradient_color_heart
+                background-clip: text
+                color: transparent
+                animation: appear_heart 0.5s
+                cursor: pointer
     .fa-regular
         position: absolute
         font-size: 26px
         padding: 0
-        @include desktop_min
-            font-size: 37px
-            padding: 0
+        @include tablet_min
+            font-size: 32px
+            
+@mixin menu_btn_desktop
+    display: flex
+    flex-direction: column    
+    justify-content: flex-start
+    width: 30%
+    height: 410px
 
+/*responsive*/
 @mixin mobile_only
     @media screen and (max-width: map-get($breakpoints, mobile))
         @content
@@ -87,8 +91,3 @@
 @mixin tablet_min
     @media screen and (min-width: map-get($breakpoints, tablet_min))
         @content
-
-@mixin menu_btn_desktop
-    display: flex
-    flex-direction: column    
-    justify-content: center

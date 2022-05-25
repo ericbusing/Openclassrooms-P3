@@ -1,21 +1,31 @@
-header
+/*home page*/
+.header
     display: flex
     justify-content: center
     box-shadow: 0 8px 5px -5px #797979
-    padding-bottom: 20px
     margin-bottom: 3px
-    padding-top: 20px
-    img 
+    padding: 20px 0
+    img
         width: 150px
-nav
+/*restaurant*/
+header
     display: flex
-    width: 90%
-    a
+    justify-content: center
+    padding: 20px 0
+    nav
         display: flex
-        align-items: center
-        text-decoration: none
-        color: inherit
-    div
-        display: flex
-        justify-content: center
-        width: 100%
+        width: 90%
+        a
+            display: flex
+            align-items: center
+            text-decoration: none
+            color: inherit
+        i
+            @include desktop_min
+                font-size: 26px
+        div
+            display: flex
+            justify-content: center
+            width: 100%
+            img
+                width: 150px

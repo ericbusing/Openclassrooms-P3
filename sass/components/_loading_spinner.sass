@@ -1,3 +1,4 @@
+/*home page*/
 .content_loading_spinner
     width: 100%
     margin: 0
@@ -15,14 +16,14 @@
     height: 100%
     z-index: 10001
     background: $color_primary
-    opacity: 0.6
+    opacity: 1
     animation: background_spinner 6s ease forwards
 .loading_spinner::after
     box-sizing: border-box
     z-index: 10002
     content: ""
     position: absolute
-    top: 15%
+    top: 25%
     left: 50%
     margin: -25px 0 0 -25px
     border: 5px solid $color_secondary
@@ -31,3 +32,6 @@
     width: 100px
     height: 100px
     animation: loading_spinner 6s ease forwards
+    @include mobile_only
+        top: 15%
+        left: 45%

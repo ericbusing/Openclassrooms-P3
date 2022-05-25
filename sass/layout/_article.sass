@@ -1,13 +1,15 @@
+/*home page*/
 article
     display: flex
     flex-direction: column
     align-items: center
     h2
         @include desktop_min
-        text-align: center
+            font-size: 28px
+            text-align: center
         @include mobile_only
-        text-align: left
-        width: 80%
+            text-align: left
+            width: 80%
 .functioning
     display: flex
     flex-direction: column
@@ -31,7 +33,6 @@ article
         margin-left: -10px
         width: 100%
         @include border_btn
-        @include shadow_btn
         cursor: pointer
         &:hover
             @include darken_shadow_btn
