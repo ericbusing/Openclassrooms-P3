@@ -28,6 +28,7 @@
 @mixin menu_btn
     display: flex
     width: 100%
+    height: 70px
     border-radius: 15px
     line-height: 0.5
     border: none
@@ -36,6 +37,13 @@
     margin-bottom: 20px
     overflow: hidden
     cursor: pointer
+
+@mixin list_btn_desktop
+    display: flex
+    flex-direction: column    
+    justify-content: flex-start
+    width: 30%
+    height: 400px
 
 @mixin animation_heart   
     .fa-solid
@@ -51,12 +59,6 @@
             cursor: pointer
         @include tablet_min
             font-size: 32px
-            &:hover           
-                background: $gradient_color_heart
-                background-clip: text
-                color: transparent
-                animation: appear_heart 0.5s
-                cursor: pointer
     .fa-regular
         position: absolute
         font-size: 26px
@@ -64,13 +66,6 @@
         @include tablet_min
             font-size: 32px
             
-@mixin menu_btn_desktop
-    display: flex
-    flex-direction: column    
-    justify-content: flex-start
-    width: 30%
-    height: 410px
-
 /*responsive*/
 @mixin mobile_only
     @media screen and (max-width: map-get($breakpoints, mobile))
