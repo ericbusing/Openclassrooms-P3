@@ -6,7 +6,10 @@
     margin-bottom: 3px
     padding: 20px 0
     img
-        width: 150px
+        @include mobile
+            width: 150px
+        @include desktop_min
+            width: 220px
 /*restaurant*/
 header
     display: flex
@@ -28,4 +31,7 @@ header
             justify-content: center
             width: 100%
             img
-                width: 150px
+                @include mobile
+                    width: 150px
+                @include desktop_min
+                    width: 220px                
