@@ -77,15 +77,8 @@ body {
   margin-bottom: 3px;
   padding: 20px 0;
 }
-@media screen and (max-width: 599px) {
-  .header img {
-    width: 150px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .header img {
-    width: 220px;
-  }
+.header img {
+  width: 150px;
 }
 
 /*restaurant*/
@@ -114,15 +107,8 @@ header nav div {
   justify-content: center;
   width: 100%;
 }
-@media screen and (max-width: 599px) {
-  header nav div img {
-    width: 150px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  header nav div img {
-    width: 220px;
-  }
+header nav div img {
+  width: 150px;
 }
 
 /*home page*/
