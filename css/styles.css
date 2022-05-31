@@ -462,6 +462,12 @@ form input {
   margin-left: 30px;
   margin-right: 30px;
 }
+.explore .introduction {
+  font-style: italic;
+}
+.explore .introduction strong {
+  color: #9356DC;
+}
 
 /*home page*/
 .heart_home_page {
@@ -762,7 +768,10 @@ form input {
 }
 
 /*home page*/
-.explore .action_btn {
+.explore a {
+  text-decoration: none;
+}
+.explore a .action_btn {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   font-size: 17px;
   cursor: pointer;
@@ -775,14 +784,10 @@ form input {
   transition-property: transform;
   transition-duration: 1000ms;
 }
-.explore .action_btn:hover {
+.explore a .action_btn:hover {
   box-shadow: 6px 6px 10px 5px #979797;
   transform: scale(1.025);
   opacity: 0.7;
-}
-.explore .action_btn a {
-  text-decoration: none;
-  color: inherit;
 }
 
 /*restaurant*/
