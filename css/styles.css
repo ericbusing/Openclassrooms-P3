@@ -780,6 +780,10 @@ form input {
   transform: scale(1.025);
   opacity: 0.7;
 }
+.explore .action_btn a {
+  text-decoration: none;
+  color: inherit;
+}
 
 /*restaurant*/
 .order {
