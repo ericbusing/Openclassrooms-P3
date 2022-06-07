@@ -37,6 +37,10 @@
     margin-bottom: 20px
     overflow: hidden
     cursor: pointer
+    animation: appear linear
+    animation: fadein linear
+    animation-fill-mode: forwards
+    opacity: 0
 
 @mixin list_btn_desktop
     display: flex
@@ -50,15 +54,22 @@
         position: relative
         color: transparent
         font-size: 26px
-        padding: 0
-        &:hover           
-            background: $gradient_color_heart
-            background-clip: text
-            color: transparent
-            animation: appear_heart 0.5s
-            cursor: pointer
+        padding: 0   
+        cursor: pointer 
+        @include mobile   
+            &:focus
+                background: $gradient_color_heart
+                background-clip: text
+                color: transparent
+                animation: appear_heart 2.5s
         @include tablet_min
-            font-size: 32px
+            &:hover           
+                background: $gradient_color_heart
+                background-clip: text
+                color: transparent
+                animation: appear_heart 0.5s
+                cursor: pointer
+                font-size: 32px
     .fa-regular
         position: absolute
         font-size: 26px

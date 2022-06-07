@@ -11,6 +11,14 @@
     opacity: 1;
   }
 }
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes appear_heart {
   0% {
     transform: translateY(50%);
@@ -29,14 +37,6 @@
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-@keyframes done_slide {
-  0% {
-    transform: translate(100%);
-  }
-  100% {
-    transform: translate(100%);
   }
 }
 @keyframes loading_spinner {
@@ -75,17 +75,18 @@ body {
   justify-content: center;
   box-shadow: 0 8px 5px -5px #797979;
   margin-bottom: 3px;
-  padding: 20px 0;
+  padding: 10px 0;
 }
-.header img {
-  width: 150px;
+.header h1 {
+  font-family: "shrikhand";
+  margin: 0;
 }
 
 /*restaurant*/
 header {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 header nav {
   display: flex;
@@ -107,24 +108,32 @@ header nav div {
   justify-content: center;
   width: 100%;
 }
-header nav div img {
-  width: 150px;
+header nav div h1 {
+  font-family: "shrikhand";
+  margin: 0;
+  font-size: 30px;
+}
+@media screen and (min-width: 1024px) {
+  header nav div h1 {
+    font-size: 40px;
+  }
 }
 
 /*home page*/
-article {
+.fonctionnement {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 @media screen and (min-width: 1024px) {
-  article h2 {
+  h2 {
     font-size: 28px;
     text-align: center;
   }
 }
 @media screen and (max-width: 599px) {
-  article h2 {
+  h2 {
     text-align: left;
     width: 80%;
   }
@@ -181,19 +190,19 @@ article {
 }
 
 /*home page*/
-aside {
+.restaurants_cards {
   background-color: #eaeaea;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-aside h2 {
+.restaurants_cards h2 {
   padding-top: 30px;
   width: 90%;
 }
 @media screen and (min-width: 1024px) {
-  aside h2 {
+  .restaurants_cards h2 {
     text-align: center;
     margin-left: 0;
     font-size: 28px;
@@ -310,7 +319,7 @@ aside h2 {
 footer {
   background-color: #353535;
 }
-footer h3 {
+footer h2 {
   font-family: Shrikhand;
   font-size: 24px;
   color: white;
@@ -319,7 +328,7 @@ footer h3 {
   margin: 0;
 }
 @media screen and (min-width: 1024px) {
-  footer h3 {
+  footer h2 {
     text-align: center;
     padding-left: 0;
   }
@@ -453,20 +462,17 @@ form input {
 .explore input:focus {
   outline: none;
 }
-.explore h3, .explore p {
+.explore h2, .explore p {
   text-align: center;
   margin-left: 70px;
   margin-right: 70px;
 }
+.explore h2 {
+  width: 75%;
+}
 .explore p {
   margin-left: 30px;
   margin-right: 30px;
-}
-.explore .introduction {
-  font-style: italic;
-}
-.explore .introduction strong {
-  color: #9356DC;
 }
 
 /*home page*/
@@ -482,16 +488,23 @@ form input {
   color: transparent;
   font-size: 26px;
   padding: 0;
-}
-.heart_home_page .fa-solid:hover {
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: text;
-  color: transparent;
-  animation: appear_heart 0.5s;
   cursor: pointer;
 }
+@media screen and (max-width: 599px) {
+  .heart_home_page .fa-solid:focus {
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    background-clip: text;
+    color: transparent;
+    animation: appear_heart 2.5s;
+  }
+}
 @media screen and (min-width: 600px) {
-  .heart_home_page .fa-solid {
+  .heart_home_page .fa-solid:hover {
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    background-clip: text;
+    color: transparent;
+    animation: appear_heart 0.5s;
+    cursor: pointer;
     font-size: 32px;
   }
 }
@@ -512,22 +525,30 @@ form input {
   display: flex;
   justify-content: flex-end;
   margin-top: -10px;
+  border: none;
 }
 .heart .fa-solid {
   position: relative;
   color: transparent;
   font-size: 26px;
   padding: 0;
-}
-.heart .fa-solid:hover {
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: text;
-  color: transparent;
-  animation: appear_heart 0.5s;
   cursor: pointer;
 }
+@media screen and (max-width: 599px) {
+  .heart .fa-solid:focus {
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    background-clip: text;
+    color: transparent;
+    animation: appear_heart 2.5s;
+  }
+}
 @media screen and (min-width: 600px) {
-  .heart .fa-solid {
+  .heart .fa-solid:hover {
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    background-clip: text;
+    color: transparent;
+    animation: appear_heart 0.5s;
+    cursor: pointer;
     font-size: 32px;
   }
 }
@@ -562,8 +583,18 @@ form input {
 }
 
 /*restaurant*/
-.restaurant_pic {
-  width: 100%;
+@media screen and (max-width: 599px) {
+  .restaurant_pic {
+    width: 100%;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .restaurant_pic {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .restaurant_pic {
@@ -596,7 +627,10 @@ form input {
   margin-bottom: 20px;
   overflow: hidden;
   cursor: pointer;
-  animation: appear 1s;
+  animation: appear linear;
+  animation: fadein linear;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 .menu_btn--1 {
   animation-delay: 300ms;
@@ -628,7 +662,8 @@ form input {
 .menu_btn .description_btn {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 5px 10px;
+  padding-top: 2px;
   width: 100%;
   height: 100%;
   text-align: left;
@@ -646,21 +681,21 @@ form input {
 }
 .menu_btn h3 {
   display: flex;
-  align-items: flex-end;
-  font-size: 18px;
-  text-overflow: ellipsis;
+  align-items: center;
   overflow: hidden;
-  margin: 5px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  margin: 0;
   line-height: 1.25;
-  white-space: normal;
   width: 100%;
+  height: 100%;
 }
 .menu_btn:hover .h3 {
-  display: flex;
-  align-items: flex-end;
-  line-height: 1;
+  overflow: hidden;
   white-space: nowrap;
-  width: 100%;
+  text-overflow: ellipsis;
+  height: 50px;
 }
 .menu_btn p {
   overflow: hidden;
@@ -668,13 +703,15 @@ form input {
   text-overflow: ellipsis;
   margin: 0;
   width: 100%;
-  height: 15px;
-  padding-top: 2px;
+  height: 50%;
+  padding-top: 3px;
+  font-size: 14px;
 }
-.menu_btn p:hover {
+.menu_btn:hover .p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  height: 20px;
 }
 .menu_btn .price {
   font-size: 14px;
@@ -697,8 +734,16 @@ form input {
     height: 100%;
   }
 }
-.menu_btn:hover .done_box {
-  margin-right: 0;
+@media screen and (min-width: 1024px) {
+  .menu_btn:hover .done_box {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .menu_btn:focus .done_box {
+    margin-right: 0;
+    transition: all 0.5s;
+  }
 }
 .menu_btn .done_rotate {
   display: flex;
@@ -715,8 +760,15 @@ form input {
   color: #99e2d0;
   font-size: 18px;
 }
-.menu_btn:hover .done {
-  animation: done_spin 0.5s ease-in-out;
+@media screen and (min-width: 1024px) {
+  .menu_btn:hover .done {
+    animation: done_spin 0.5s ease-in-out;
+  }
+}
+@media screen and (max-width: 599px) {
+  .menu_btn:focus .done {
+    animation: done_spin 0.5s ease-in-out;
+  }
 }
 
 /*home page*/
