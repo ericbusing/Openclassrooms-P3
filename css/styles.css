@@ -500,7 +500,7 @@ form input {
     background: linear-gradient(to bottom, #9356DC, #FF79DA);
     background-clip: text;
     color: transparent;
-    animation: appear_heart 2.5s;
+    animation: appear_heart 0.5s;
   }
 }
 @media screen and (min-width: 600px) {
@@ -547,7 +547,7 @@ form input {
     background: linear-gradient(to bottom, #9356DC, #FF79DA);
     background-clip: text;
     color: transparent;
-    animation: appear_heart 2.5s;
+    animation: appear_heart 0.5s;
   }
 }
 @media screen and (min-width: 600px) {

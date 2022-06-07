@@ -709,8 +709,8 @@ form input {
     -webkit-background-clip: text;
             background-clip: text;
     color: transparent;
-    -webkit-animation: appear_heart 2.5s;
-            animation: appear_heart 2.5s;
+    -webkit-animation: appear_heart 0.5s;
+            animation: appear_heart 0.5s;
   }
 }
 @media screen and (min-width: 600px) {
@@ -768,8 +768,8 @@ form input {
     -webkit-background-clip: text;
             background-clip: text;
     color: transparent;
-    -webkit-animation: appear_heart 2.5s;
-            animation: appear_heart 2.5s;
+    -webkit-animation: appear_heart 0.5s;
+            animation: appear_heart 0.5s;
   }
 }
 @media screen and (min-width: 600px) {
