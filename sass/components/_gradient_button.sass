@@ -31,4 +31,10 @@
         &:hover
             @include darken_shadow_btn
             transform: scale(1.025)
-            opacity: 0.7    
+            opacity: 0.7
+        @include mobile
+        &:focus
+            @include darken_shadow_btn
+            transform: scale(1.025)
+            opacity: 0.7
+            
