@@ -739,7 +739,7 @@ form input {
 }
 
 /*restaurant*/
-#heart {
+.heart {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -750,10 +750,10 @@ form input {
   margin-top: -10px;
   border: none;
 }
-#heart:hover {
+.heart:hover {
   background-color: transparent;
 }
-#heart .fa-solid {
+.heart .fa-solid {
   position: relative;
   color: transparent;
   font-size: 26px;
@@ -761,7 +761,7 @@ form input {
   cursor: pointer;
 }
 @media screen and (max-width: 599px) {
-  #heart .fa-solid:focus {
+  .heart .fa-solid:focus {
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     background: -o-linear-gradient(top, #9356DC, #FF79DA);
     background: linear-gradient(to bottom, #9356DC, #FF79DA);
@@ -773,7 +773,7 @@ form input {
   }
 }
 @media screen and (min-width: 600px) {
-  #heart .fa-solid:hover {
+  .heart .fa-solid:hover {
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     background: -o-linear-gradient(top, #9356DC, #FF79DA);
     background: linear-gradient(to bottom, #9356DC, #FF79DA);
@@ -786,18 +786,18 @@ form input {
     font-size: 32px;
   }
 }
-#heart .fa-regular {
+.heart .fa-regular {
   position: absolute;
   font-size: 26px;
   padding: 0;
 }
 @media screen and (min-width: 600px) {
-  #heart .fa-regular {
+  .heart .fa-regular {
     font-size: 32px;
   }
 }
 @media screen and (max-width: 1024px) {
-  #heart {
+  .heart {
     margin: 0;
     width: 10%;
     display: -webkit-box;
@@ -813,7 +813,7 @@ form input {
   }
 }
 @media screen and (min-width: 1024px) {
-  #heart {
+  .heart {
     position: initial;
     padding-top: 20px;
     display: -webkit-box;

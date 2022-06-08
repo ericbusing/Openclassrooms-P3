@@ -443,11 +443,12 @@ form input {
     width: 99%;
   }
 }
-.menu_list h4 {
+.menu_list h2 {
   font-weight: 400;
   border-bottom: 3px solid #99e2d0;
   width: 50px;
   padding-bottom: 3px;
+  font-size: 16px;
 }
 .menu_list p {
   width: 90%;
@@ -727,6 +728,8 @@ form input {
   font-weight: bold;
   padding-top: 45px;
   padding-right: 25px;
+  width: 20%;
+  height: 70px;
 }
 .menu_btn .done_box {
   display: flex;
@@ -743,7 +746,7 @@ form input {
     height: 100%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   .menu_btn:hover .done_box {
     margin-right: 0;
   }
@@ -769,7 +772,7 @@ form input {
   color: #99e2d0;
   font-size: 18px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   .menu_btn:hover .done {
     animation: done_spin 0.5s ease-in-out;
   }

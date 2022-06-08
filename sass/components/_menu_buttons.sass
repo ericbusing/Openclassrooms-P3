@@ -58,6 +58,8 @@
         font-weight: bold
         padding-top: 45px
         padding-right: 25px
+        width: 20%
+        height: 70px
     .done_box
         display: flex
         align-items: center
@@ -69,7 +71,7 @@
         transition: all 0.5s
         @include desktop_min
             height: 100% 
-    @include desktop_min           
+    @include tablet_min           
         &:hover .done_box
             margin-right: 0   
     @include mobile
@@ -89,7 +91,7 @@
         background-clip: text
         color: $color_tertiary
         font-size: 18px   
-    @include desktop_min     
+    @include tablet_min     
         &:hover .done
             animation: done_spin 0.5s ease-in-out     
     @include mobile
