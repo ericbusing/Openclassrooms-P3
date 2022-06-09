@@ -497,7 +497,7 @@ form input {
   cursor: pointer;
 }
 @media screen and (max-width: 599px) {
-  .heart_home_page .fa-solid:focus {
+  .heart_home_page .fa-solid:active {
     background: linear-gradient(to bottom, #9356DC, #FF79DA);
     background-clip: text;
     color: transparent;
@@ -533,7 +533,7 @@ form input {
   margin-top: -10px;
   border: none;
 }
-.heart:hover {
+.heart:hover, .heart:active {
   background-color: transparent;
 }
 .heart .fa-solid {
@@ -544,7 +544,7 @@ form input {
   cursor: pointer;
 }
 @media screen and (max-width: 599px) {
-  .heart .fa-solid:focus {
+  .heart .fa-solid:active {
     background: linear-gradient(to bottom, #9356DC, #FF79DA);
     background-clip: text;
     color: transparent;
@@ -689,23 +689,11 @@ form input {
     padding-left: 10px;
   }
 }
-.menu_btn h3 {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.menu_btn .title_button {
   font-size: 18px;
-  margin: 0;
+  font-weight: bold;
+  padding-top: 10px;
   line-height: 1.25;
-  width: 100%;
-  height: 100%;
-}
-.menu_btn:hover .h3 {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  height: 50px;
 }
 .menu_btn p {
   overflow: hidden;
@@ -714,7 +702,7 @@ form input {
   margin: 0;
   width: 100%;
   height: 50%;
-  padding-top: 3px;
+  padding-top: 12px;
   font-size: 14px;
 }
 .menu_btn:hover .p {
